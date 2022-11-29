@@ -4,19 +4,25 @@
 
 class Livre
 {
+
+public:
+	enum Genres {
+		Science_fiction, Aventure, Biographie, Historique, Realiste, Education, Romance, Policier
+	};
+	enum Langues {
+		Francais, Anglais, Mandarin, Espagnol, Arabe, Russe
+	};
 public:
 	Livre();
 	
-	enum Genres {
-		Science_fiction, Aventure, Biographie, Historique, Realiste, Education, Romance 
-	};
-
+	
+	int getIsbn();
 
 private:
-	std::string tire;
+	std::string titre;
 	std::string auteur;
-	std::string langue;
+	Langues langue;
 	Genres genre;
 	Date date;
-	int ISBN;
+	int isbn;
 };

@@ -17,6 +17,7 @@ public:
 	void updateDay(int day);
 	void next();
 	void back();
+	std::string toString();
 private:
 	int _month;
 	int _day;
@@ -27,7 +28,7 @@ private:
 bool isDate(int month, int day);
 int getDaysInMonth(int month);
 int dayOfYear(Date d);
-std::string toString(Date d);
+
 
 
 #endif 
