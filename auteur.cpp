@@ -2,9 +2,7 @@
 #include <assert.h>
 
 
-Auteur::Auteur(){
-          
-  }
+
 Auteur::Auteur(std::string nom, std::string prenom,  std::string id) {
   _nom = nom;
   _prenom = prenom;
