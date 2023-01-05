@@ -6,7 +6,7 @@
 Auteur::Auteur(std::string nom, std::string prenom,  std::string id) {
   _nom = nom;
   _prenom = prenom;
-  _id = "987654321";
+  _id = "000000";
 }
 std::string Auteur::id() { return _id; }
 std::string Auteur::nom() { return _nom; }

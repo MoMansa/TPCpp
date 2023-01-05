@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <string>
-
+#include <string>
 #ifndef DATE_H
 #define DATE_H
 

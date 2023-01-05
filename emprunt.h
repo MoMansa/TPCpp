@@ -10,10 +10,6 @@
 class Emprunt {
     public:
         Emprunt(Date emprunt, Date retour, Livre livre, Lecteur lecteur);
-        date1 = emprunt();
-        date2 = retour();
-        isbn = livre.isbn();
-        id = lecteur.id();
         std::string toString();
 
     private:
