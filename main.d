@@ -1,2 +1,2 @@
-main.o: main.cpp date.h auteur.h livre.h lecteur.h emprunt.h \
- bibliotheque.h
+main.o: main.cpp auteur.h bibliotheque.h livre.h date.h lecteur.h \
+ emprunt.h

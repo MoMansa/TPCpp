@@ -4,7 +4,7 @@ CXX        = g++
 CXXFLAGS   = -Wall  -std=c++20
 DEPFLAGS   = -MMD
 LDFLAGS    =
-SRCS       = date.cpp auteur.cpp lecteur.cpp livre.cpp emprunt.cpp main.cpp 
+SRCS       = date.cpp auteur.cpp lecteur.cpp livre.cpp emprunt.cpp bibliotheque.cpp main.cpp 
 OBJS       = $(SRCS:.cpp=.o)
 TARGET     = main
 DEPS	   = $(OBJS:.o=.d)
