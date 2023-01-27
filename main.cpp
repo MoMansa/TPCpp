@@ -13,14 +13,21 @@ std::ostream &operator<<(std::ostream &os, Livre &L) {
      << L._publication.toString() << "/" << std::to_string(L._isbn);
   return os;
 }
+  
+std::ostream& operator<<(std::ostream &os, Lecteur &L) {
+  
+  os << L._nom << "/" << L._prenom << "/" << std::to_string(L._id);
+  return os;
+}
+  
 
 int main(int argc, char const *argv[]) {
   Date publication(12, 12, 2012);
   Date empruntdate(12, 12, 2022);
   Date retourdate(1, 1, 2023);
 
-  Lecteur Lec1(" Terieur ", " alex ", " 000001 ");
-  Lecteur Lec2(" Terieur ", " Alain ", " 000002 ");
+  Lecteur Lec1(" Terieur ", " alex ", 101 );
+  Lecteur Lec2(" Terieur ", " Alain ",  102 );
 
   Auteur A1("Rowling", "J. K. ", "1");
   Auteur A2("Martin", "George R. R", "2");
@@ -81,19 +88,30 @@ int main(int argc, char const *argv[]) {
   B1.addlivre(l9);
   B1.addlivre(l10);
   B1.addlivre(l11);
-
+  B1.addlecteur(Lec2);
+  B1.addemprunt(E2);
+  
   std::cout << "Bibliotheque" << std::endl;
+  std::cout << "Entrer votre ID" << std::endl;
+
+  int choix2;
+  std::cin >> choix2;
+  
+  if (B1.idlec(choix2)) {
+    Lecteur test2 = B1.read(choix2);
+    std::cout << test2 << std::endl;
+
+  } else {
+    std::cout << "ID indisponible";
+  }
+  
   std::cout << "Livres disponibles: " << std::endl;
 
   for (int i = 0; i < B1.getlivre().size(); i++) {
     std::cout << B1.getlivre().at(i).gettitre() << std::endl;
   }
 
-  std::cout << "Emprunt disponible : " << std::endl;
-
-  for (int i = 0; i < emprunts.size(); i++) {
-    std::cout << emprunts.at(i).toString() << std::endl;
-  }
+  std::cout << "Info Livres disponibles veuillez entrer un isbn: " << std::endl;
   
   int choix;
   std::cin >> choix;
@@ -106,9 +124,9 @@ int main(int argc, char const *argv[]) {
     std::cout << "livre indisponible";
   }
 
-  //std::cout << l1 << std::endl;
-
-  // std::cout << "Lecteur " << Lec1.toString() << " a emprunté" << std::endl;
-  // std::cout << "Livre" << l1.toString() << std::endl;
-  // std::cout << empruntdate.toString() << std::endl;
 }
+/**std::cout << "Emprunt disponible : " << std::endl;
+
+  for (int i = 0; i < emprunts.size(); i++) {
+    std::cout << emprunts.at(i).toString() << std::endl;
+  }*/

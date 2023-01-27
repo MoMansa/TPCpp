@@ -7,17 +7,18 @@
 
 class Lecteur {
 public:
-  Lecteur(std::string nom = "", std::string prenom = "", std::string id = "");
+  Lecteur(std::string nom, std::string prenom, int id);
   std::string nom();
   std::string prenom();
-  std::string id();
+  int id() const;
   std::string toString();
-  std::string getidlecteur();
+  int getidlecteur();
+  friend std::ostream& operator<<(std::ostream& os, Lecteur& L);
 
 private:
   std::string _nom;
   std::string _prenom;
-  std::string _id;
+  int _id;
 };
 
 #endif

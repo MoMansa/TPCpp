@@ -9,12 +9,12 @@
 
 class Emprunt {
 public:
-  Emprunt(std::string idlecteur, int isbnlivre, Date empruntdate,
+  Emprunt(int idlecteur, int isbnlivre, Date empruntdate,
           Date retourdate);
   std::string toString();
 
 private:
-  std::string _idlecteur;
+  int _idlecteur;
   int _isbnlivre;
   Date _empruntdate;
   Date _retourdate;

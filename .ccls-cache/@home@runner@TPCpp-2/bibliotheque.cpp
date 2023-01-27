@@ -7,6 +7,26 @@ Bibliotheque::Bibliotheque(Livre livre, Lecteur lecteur, Emprunt emprunt) {
   _emprunt.push_back(emprunt);
 }
 
+bool Bibliotheque::idlec(int choix2) {
+
+  for (int i = 0; i < _lecteur.size(); i++) {
+    if (choix2 == _lecteur.at(i).getidlecteur()) {
+      return true;
+    }
+  }
+  return false;
+}
+
+Lecteur Bibliotheque::read(int choix2) {
+
+  for (int i = 0; i < _lecteur.size(); i++) {
+
+    if (choix2 == _lecteur.at(i).getidlecteur()) {
+      return _lecteur.at(i);
+    }
+  }
+}
+
 bool Bibliotheque::livredispo(int choix) {
 
   for (int i = 0; i < _livre.size(); i++) {

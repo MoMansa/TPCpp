@@ -2,7 +2,7 @@
 #include "emprunt.h"
 #include <assert.h>
 
-Emprunt::Emprunt(std::string lecteur, int livre, Date empruntdate,
+Emprunt::Emprunt(int lecteur, int livre, Date empruntdate,
                  Date retourdate) {
   _idlecteur = lecteur;
   _isbnlivre = livre;
@@ -11,7 +11,7 @@ Emprunt::Emprunt(std::string lecteur, int livre, Date empruntdate,
 }
 
 std::string Emprunt::toString() {
-  return _idlecteur + " a emprunter le livre " + std::to_string(_isbnlivre) +
+  return std::to_string(_idlecteur) + " a emprunter le livre " + std::to_string(_isbnlivre) +
          " le " + _empruntdate.toString() + " à retourner le " +
          _retourdate.toString();
 }
