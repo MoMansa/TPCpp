@@ -130,7 +130,9 @@ int main(int argc, char const *argv[]) {
     std::cout << test2 << std::endl;
 
   } else {
-    std::cout << "ID indisponible";
+    std::cout << "ID inconnu " << std::endl;
+  
+    return 0;
   }
   
   std::cout << "Livres disponibles: " << std::endl;
