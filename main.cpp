@@ -22,7 +22,17 @@ std::ostream& operator<<(std::ostream &os, Lecteur &L) {
   
 
 int main(int argc, char const *argv[]) {
-  Date publication(12, 12, 2012);
+  Date publication1(6, 27, 1997 );
+  Date publication2(7, 2, 1998);
+  Date publication3(7, 8, 1999);
+  Date publication4(10, 20, 2018);
+  Date publication5(7, 22, 2011);
+  Date publication6(10, 6, 1998);
+  Date publication7(8, 1, 1996);
+  Date publication8(7, 23, 2005);
+  Date publication9(11, 20, 2008);
+  Date publication10(8, 11, 2011);
+  Date publication11(1, 1, 2008);
   Date empruntdate(12, 12, 2022);
   Date retourdate(1, 1, 2023);
 
@@ -35,36 +45,46 @@ int main(int argc, char const *argv[]) {
   Auteur A4("Sun", "Tzu ", "4");
 
   Livre l1(" Harry Potter à l'école des sorciers ", A1, " français",
-           publication, 1);
+           publication1 , 1);
   Livre l2(" Harry Potter et la chambre des secrets ", A1, " français ",
-           publication, 2);
+           publication2, 2);
   Livre l3(" Harry potter et le prisonnier d'azkaban", A1, " français ",
-           publication, 3);
-  Livre l4(" Game of Thrones Fire & Blood ", A2, " anglais ", publication,
+           publication3, 3);
+  Livre l4(" Game of Thrones Fire & Blood ", A2, " anglais ", publication4,
           4);
-  Livre l5(" Game of Thrones A Game of Thrones ", A2, " anglais ", publication,
+  Livre l5(" Game of Thrones A Feast for Crows ", A2, " anglais ", publication5,
            5);
-  Livre l6(" Game of Thrones A Clash of Kings ", A2, " anglais ", publication,
+  Livre l6(" Game of Thrones A Clash of Kings ", A2, " anglais ", publication6,
            6);
-  Livre l7(" Game of Thrones A Storm of Swords ", A2, " anglais ", publication,
+  Livre l7(" Game of Thrones A game of thrones  ", A2, " anglais ", publication7,
            7);
-  Livre l8(" Eragon 1 ", A3, "français", publication, 12);
-  Livre l9(" Eragon 2 ", A3, "français", publication, 13);
-  Livre l10(" Eragon 3 ", A3, "français", publication, 10);
-  Livre l11(" l'Art de la geurre ", A4, "Chinois classique", publication,
+  Livre l8(" Eragon l'Ainé ", A3, "français", publication8, 12);
+  Livre l9(" Eragon Brisingr ", A3, "français", publication9, 13);
+  Livre l10(" Eragon l'Héritage ", A3, "français", publication10, 10);
+  Livre l11(" l'Art de la geurre ", A4, "Chinois classique", publication11,
             11);
 
   Emprunt E1(Lec1.getidlecteur(), l1.getisbnlivre(), empruntdate, retourdate);
   Emprunt E2(Lec1.getidlecteur(), l2.getisbnlivre(), empruntdate, retourdate);
-  Emprunt E3(Lec2.getidlecteur(), l9.getisbnlivre(), empruntdate, retourdate);
+  Emprunt E3(Lec1.getidlecteur(), l9.getisbnlivre(), empruntdate, retourdate);
   Emprunt E4(Lec1.getidlecteur(), l3.getisbnlivre(), empruntdate, retourdate);
-  Emprunt E5(Lec2.getidlecteur(), l5.getisbnlivre(), empruntdate, retourdate);
+  Emprunt E5(Lec1.getidlecteur(), l5.getisbnlivre(), empruntdate, retourdate);
   Emprunt E6(Lec1.getidlecteur(), l6.getisbnlivre(), empruntdate, retourdate);
   Emprunt E7(Lec1.getidlecteur(), l11.getisbnlivre(), empruntdate, retourdate);
   Emprunt E8(Lec1.getidlecteur(), l6.getisbnlivre(), empruntdate, retourdate);
   Emprunt E9(Lec1.getidlecteur(), l7.getisbnlivre(), empruntdate, retourdate);
   Emprunt E10(Lec1.getidlecteur(), l8.getisbnlivre(), empruntdate, retourdate);
-
+   Emprunt E11(Lec2.getidlecteur(), l1.getisbnlivre(), empruntdate, retourdate);
+  Emprunt E12(Lec2.getidlecteur(), l2.getisbnlivre(), empruntdate, retourdate);
+  Emprunt E13(Lec2.getidlecteur(), l9.getisbnlivre(), empruntdate, retourdate);
+  Emprunt E14(Lec2.getidlecteur(), l3.getisbnlivre(), empruntdate, retourdate);
+  Emprunt E15(Lec2.getidlecteur(), l5.getisbnlivre(), empruntdate, retourdate);
+  Emprunt E16(Lec2.getidlecteur(), l6.getisbnlivre(), empruntdate, retourdate);
+  Emprunt E17(Lec2.getidlecteur(), l11.getisbnlivre(), empruntdate, retourdate);
+  Emprunt E18(Lec2.getidlecteur(), l6.getisbnlivre(), empruntdate, retourdate);
+  Emprunt E19(Lec2.getidlecteur(), l7.getisbnlivre(), empruntdate, retourdate);
+  Emprunt E20(Lec2.getidlecteur(), l8.getisbnlivre(), empruntdate, retourdate);
+  
   std::vector<Emprunt> emprunts = {};
   emprunts.push_back(E1);
   emprunts.push_back(E2);
@@ -90,6 +110,14 @@ int main(int argc, char const *argv[]) {
   B1.addlivre(l11);
   B1.addlecteur(Lec2);
   B1.addemprunt(E2);
+  B1.addemprunt(E3);
+  B1.addemprunt(E4);
+  B1.addemprunt(E5);
+  B1.addemprunt(E6);
+  B1.addemprunt(E7);
+  B1.addemprunt(E8);
+  B1.addemprunt(E9);
+  B1.addemprunt(E10);
   
   std::cout << "Bibliotheque" << std::endl;
   std::cout << "Entrer votre ID" << std::endl;
@@ -123,10 +151,10 @@ int main(int argc, char const *argv[]) {
   } else {
     std::cout << "livre indisponible";
   }
-
-}
+  
 /**std::cout << "Emprunt disponible : " << std::endl;
 
   for (int i = 0; i < emprunts.size(); i++) {
     std::cout << emprunts.at(i).toString() << std::endl;
   }*/
+}

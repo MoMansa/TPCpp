@@ -15,6 +15,6 @@ int Livre::getisbnlivre() { return _isbn; };
 std::string Livre::gettitre() { return _titre; };
 
 std::string Livre::toString() {
-  return _titre + " " + _auteur.toString() + "/" + _langue + "/" +
-         _publication.toString() + "/" + std::to_string(_isbn);
+  return _titre + " " + _auteur.toString() + " / " + _langue + " / " +
+         _publication.toString() + " isbn: " + std::to_string(_isbn);
 }

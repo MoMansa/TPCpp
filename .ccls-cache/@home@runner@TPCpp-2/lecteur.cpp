@@ -11,4 +11,4 @@ std::string Lecteur::nom() { return _nom; }
 std::string Lecteur::prenom() { return _prenom; }
 int Lecteur::getidlecteur() { return _id; };
 
-std::string Lecteur::toString() { return std::to_string(_id) + "/" + _nom + "/" + _prenom; }
+std::string Lecteur::toString() { return std::to_string(_id) + " " + _nom + " ID " + _prenom; }
