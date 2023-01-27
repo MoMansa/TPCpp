@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #include <string>
 
 #include <iostream>
@@ -24,6 +23,7 @@ private:
 	int _year;
 
 };
+
 
 bool isDate(int month, int day);
 int getDaysInMonth(int month);

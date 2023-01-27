@@ -139,12 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Auteur.cpp" />
+    <ClCompile Include="Bibliotheque.cpp" />
     <ClCompile Include="Date.cpp" />
+    <ClCompile Include="Helper.cpp" />
+    <ClCompile Include="Lecteur.cpp" />
     <ClCompile Include="Livre.cpp" />
     <ClCompile Include="TP01.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Auteur.h" />
+    <ClInclude Include="Bibliotheque.h" />
     <ClInclude Include="Date.h" />
+    <ClInclude Include="Emprunt.h" />
     <ClInclude Include="Lecteur.h" />
     <ClInclude Include="Livre.h" />
   </ItemGroup>
